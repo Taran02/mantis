@@ -35,6 +35,7 @@ import org.openqa.selenium.firefox.FirefoxDriver;
 import org.openqa.selenium.firefox.FirefoxProfile;
 import org.openqa.selenium.firefox.internal.ProfilesIni;
 import org.openqa.selenium.support.ui.Select;
+import org.testng.annotations.Test;
 
 import com.opencsv.CSVReader;
 
@@ -133,7 +134,7 @@ public class Mantis {
 				+ System.lineSeparator() + "Contact: +91.172.5218500 (O) Ext: 72009 | +91.977.900.0714 (M)"
 				+ System.lineSeparator() + "US Number : +1.240.241.6894"
 				+ System.lineSeparator() + "www.seasiainfotech.com";
-		String []to = {"BrarArshdeep@SEASIAINFOTECH.COM", "umaun@SEASIAINFOTECH.COM","VermaGanesh@SEASIAINFOTECH.COM"};
+		String []to = {"kaurtaranbir@SEASIAINFOTECH.COM"};//{"BrarArshdeep@SEASIAINFOTECH.COM","VermaGanesh@SEASIAINFOTECH.COM"};
 		String []cc = {"yashukapila@seasiainfotech.com"};//{"deepak@SEASIAINFOTECH.COM"};//
 		String []bcc = {"kaurtaranbir@SEASIAINFOTECH.COM"};
 		
@@ -145,13 +146,28 @@ public class Mantis {
 	 * 
 	 * @return yyyy/MM/dd format
 	 */
+	
 	public static String[] dateFilterStrings()
 	{
-		Date lastMondayDate = new Date(System.currentTimeMillis()-24*60*60*1000*(7));
+		/*Date lastMondayDate = new Date(System.currentTimeMillis()-24*60*60*1000*(7));
+		
+		System.out.println("lastMondayDate::"+lastMondayDate);
+		
 		Date yesterdayDate = new Date(System.currentTimeMillis()-24*60*60*1000*(1));
+		System.out.println("yesterdayDate::"+yesterdayDate);*/
 		String []returnDates = new String[2];
-		returnDates[0] = new SimpleDateFormat("yyyy/MM/dd").format(lastMondayDate);
-		returnDates[1] = new SimpleDateFormat("yyyy/MM/dd").format(yesterdayDate);
+		
+		returnDates[0] = "2019/07/01";          //new SimpleDateFormat("yyyy/MM/dd").format(lastMondayDate);
+		
+		System.out.println("returnDates[0]::"+returnDates[0]);
+		returnDates[1] =   "2019/07/08";                //new SimpleDateFormat("yyyy/MM/dd").format(yesterdayDate);
+		System.out.println("returnDates[1]::"+returnDates[1]);
+		
+		/*lastMondayDate::Mon Jul 01 12:34:25 IST 2019
+		yesterdayDate::Sun Jul 07 12:34:25 IST 2019
+		returnDates[0]::2019/07/01
+		returnDates[1]::2019/07/07*/
+		
 		return returnDates;
 	}
 	
