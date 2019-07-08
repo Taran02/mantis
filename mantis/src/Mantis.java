@@ -135,7 +135,7 @@ public class Mantis {
 				+ System.lineSeparator() + "US Number : +1.240.241.6894"
 				+ System.lineSeparator() + "www.seasiainfotech.com";
 		String []to = {"kaurtaranbir@SEASIAINFOTECH.COM"};//{"BrarArshdeep@SEASIAINFOTECH.COM","VermaGanesh@SEASIAINFOTECH.COM"};
-		String []cc = {"yashukapila@seasiainfotech.com"};//{"deepak@SEASIAINFOTECH.COM"};//
+		String []cc =  {"kaurtaranbir@SEASIAINFOTECH.COM"}; // {"yashukapila@seasiainfotech.com"};//{"deepak@SEASIAINFOTECH.COM"};//
 		String []bcc = {"kaurtaranbir@SEASIAINFOTECH.COM"};
 		
 		sendMail(to, cc, bcc, "yashukapila@seasiainfotech.com",
